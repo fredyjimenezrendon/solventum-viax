@@ -1,5 +1,9 @@
 rm -f -r output
 mkdir "output"
+echo "fredy"
+echo $ACCESS_TOKEN_URL
+echo $ACCESS_TOKEN_USERNAME
+echo $DEPLOYMENT_URL
 for dir in lambdas/*/*/
 do
 #    lambda_dir=${dir%*/}
