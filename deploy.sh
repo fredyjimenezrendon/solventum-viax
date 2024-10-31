@@ -1,10 +1,6 @@
 rm -f -r output
 mkdir "output"
 echo "fredy"
-echo ${{ env.ACCESS_TOKEN_URL }}
-echo $ACCESS_TOKEN_USERNAME
-echo $DEPLOYMENT_URL
-echo $ACCESS_TOKEN_PASSWORD
 for dir in lambdas/*/*/
 do
 #    lambda_dir=${dir%*/}
