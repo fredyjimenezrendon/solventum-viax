@@ -1,0 +1,4 @@
+function:
+  type: FUNCTION
+  name: barebone-function
+  runtime: Node16.x

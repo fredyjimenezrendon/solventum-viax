@@ -1,0 +1,4 @@
+function:
+  type: FUNCTION
+  name: event-handler
+  runtime: Node16.x

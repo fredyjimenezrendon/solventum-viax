@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "tasks": {
+    "type_checking": {
+      "inputs": [
+        "src/*.ts",
+        "src/**/*.ts",
+        "test/*.ts",
+        "test/**/*.ts"
+      ],
+      "outputs": []
+    },
+    "lint": {
+      "inputs": [
+        ".eslintrc.js",
+        "src/*.ts",
+        "src/**/*.ts",
+        "test/*.ts",
+        "test/**/*.ts"
+      ],
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": ["^build", "type_checking"],
+      "inputs": [
+        "src/*.ts",
+        "src/**/*.ts",
+        "viax.yaml"
+      ],
+      "outputs": [
+        "./target/**"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "src/*.ts",
+        "src/**/*.ts",
+        "test/*.ts",
+        "test/**/*.ts",
+        "**/jest.config.js",
+        "tsconfig.json"
+      ],
+      "outputs": ["./coverage/**"]
+    }
+  }
+}
