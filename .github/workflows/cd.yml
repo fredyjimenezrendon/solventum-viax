@@ -28,9 +28,9 @@ jobs:
       - name: Run Custom Deployment Script
         env:
           ACCESS_TOKEN_PASSWORD: ${{ secrets.ACCESS_TOKEN_PASSWORD }}
-          ACCESS_TOKEN_URL: ${{ ACCESS_TOKEN_URL }}
-          ACCESS_TOKEN_USERNAME: ${{ ACCESS_TOKEN_USERNAME }}
-          DEPLOYMENT_URL: ${{ DEPLOYMENT_URL }}
+          ACCESS_TOKEN_URL: ${{ env.ACCESS_TOKEN_URL }}
+          ACCESS_TOKEN_USERNAME: ${{ env.ACCESS_TOKEN_USERNAME }}
+          DEPLOYMENT_URL: ${{ env.DEPLOYMENT_URL }}
         run: |
           apt-get update && apt-get install zip && apt-get install jq -y
           chmod +x deploy.sh && ./deploy.sh
